@@ -15,4 +15,4 @@ const MemberSchema = new mongoose.Schema({
   },
 })
 
-module.exports = new mongoose.model("MemberModel", MemberSchema)
+module.exports = new mongoose.model("users", MemberSchema)

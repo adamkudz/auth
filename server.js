@@ -10,6 +10,7 @@ const cors = require("cors")
 const morgan = require("morgan")
 const LoginRouter = require("./routes/login.route")
 const MemberRouter = require("./routes/member.route")
+const RegisterRouter = require("./routes/register.route")
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -17,14 +18,15 @@ app.use(morgan("combined"))
 app.use(cors())
 app.use(express.static("public"))
 //
-//  PASSPORT RELATED MIDDLEWARE
-// app.use(session({ secret: "secret", resave: false, saveUninitialized: true }))
-// app.use(passport.initialize())
-// app.use(passport.session())
+
+//PASSPORT RELATED MIDDLEWARE
+app.use(session({ secret: "secret", resave: false, saveUninitialized: true }))
+app.use(passport.initialize())
+app.use(passport.session())
 
 //
 //
-app.use("/login", LoginRouter)
+
 app.use("/members", MemberRouter)
 
 //
