@@ -1,19 +1,5 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let x = "this is main page"
+console.log(x)
 
 const memberData = [
   { name: "Bill", email: "bill@gmail.com", password: "billpassword" },

@@ -3,8 +3,11 @@ const Router = express.Router()
 const passport = require("passport")
 const LocalStrategy = require("passport-local")
 
-Router.get("/", (req, res) =>
-  res.send("<h1>You have reached the Login Route</h1>"),
+Router.get("/admin", (req, res) =>
+  res.send("<h1>You have reached the Login Admin Route</h1>"),
+)
+Router.post("/", (req, res) =>
+  res.send("<h1>You have Submitted the login form!</h1>"),
 )
 
 // passport.use(
