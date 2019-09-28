@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 3000
 const cors = require("cors")
 const morgan = require("morgan")
 const LoginRouter = require("./routes/login.route")
+const MemberRouter = require("./routes/member.route")
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -24,6 +25,7 @@ app.use(express.static("public"))
 //
 //
 app.use("/login", LoginRouter)
+app.use("/members", MemberRouter)
 
 //
 
